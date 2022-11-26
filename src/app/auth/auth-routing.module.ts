@@ -3,10 +3,12 @@ import { Routes, RouterModule } from '@angular/router';
 import { ForgotComponent } from './pages/forgot/forgot.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { LoginComponent } from './pages/login/login.component';
+import { AuthComponent } from './auth.component';
 
 const routes: Routes = [
   {
     path: '',
+    component: AuthComponent,
     children: [
       {
         path: 'forgot',
