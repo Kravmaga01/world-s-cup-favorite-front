@@ -1,14 +1,24 @@
 <H2>Matches</H2>
-<article class="card container " *ngFor="let coutry of countries$ |async">
+<article class="card" *ngFor="let coutry of countries$ |async">
 
     <h6>{{coutry.name}}</h6>
-    <dl>
+    <table class="card_table">
+        <th>Equipos</th>
+        <th> PG </th>
+        <th> W </th>
+        <th> E </th>
+        <th> L </th>
+        <th>Pts </th>
+    </table>
+    <dl *ngFor="let country of countries$ |async">
         <dt> <img src="{{coutry.flag}}" loading="lazy" width="24px" height="17px">{{coutry.name}}</dt>
         <dd> {{coutry.favoritePoint}}</dd>
-    </dl>
-    <dl>
-        <dt> <img src="{{coutry.flag}}" loading="lazy" width="24px" height="17px">{{coutry.name}}</dt>
+        <dd> {{coutry.favoritePoint}}</dd>
+        <dd> {{coutry.favoritePoint}}</dd>
+        <dd> {{coutry.favoritePoint}}</dd>
         <dd> {{coutry.favoritePoint}}</dd>
     </dl>
+
+
 
 </article>

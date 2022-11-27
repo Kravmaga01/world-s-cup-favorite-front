@@ -1,8 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
-  --primarycolor: #4462ed;
+  --primarycolor: #002efb;
   --secundcolor: #275cfc5b;
-  --cardcolor: #003cffa8;
+  --cardcolor: circle at 74.18% 116.45%, #0055ffa0 0, #0062ff 25%, #1800ff 50%,
+    #0007ea 75%, #000dd6 100%;
   --buttonHoverColor: #4463edb5;
   --formFont-color: ;
 }
@@ -34,6 +35,7 @@ body {
       border-color: hsl(342deg 67% 33%);
     }
     & > button {
+      color: whitesmoke;
       margin-top: 15px;
       height: 47px;
       width: 150px;
@@ -53,9 +55,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(./assets/font-app.png);
-  background-color: #cccccc;
-  background-repeat: no-repeat, repeat;
+  background: url(./assets/font-app.png) no-repeat center center fixed;
+  background-color: #cccccc69;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 }
 

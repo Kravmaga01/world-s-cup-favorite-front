@@ -4,12 +4,7 @@
   flex-direction: column;
   border-radius: solid;
   padding: 1rem;
-  background-image: radial-gradient(
-    circle at 89.7% 89.7%,
-    #9990ff 0,
-    #4361ed 50%,
-    #0039c8 100%
-  );
+  background-image: radial-gradient(var(--cardcolor));
   & > h6 {
     font-weight: bolder;
     font-size: 26px;

@@ -3,10 +3,11 @@
   height: 100vh;
   text-align: center;
   &_nav {
-    height: 50px;
+    height: 100px;
     display: flex;
     justify-content: space-around;
     background-color: var(--primarycolor);
+    border-radius: 0% 0% 50% 70%;
     & > a {
       align-self: center;
       font-size: 20px;
@@ -20,5 +21,8 @@
         filter: invert(1.4);
       }
     }
+  }
+  &_main {
+    width: 100%;
   }
 }

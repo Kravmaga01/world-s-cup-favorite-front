@@ -1,15 +1,12 @@
 .card {
+  width: 100%;
   border-radius: 30px;
   display: flex;
   flex-direction: column;
   border-radius: solid;
-  padding: 1rem;
-  background-image: radial-gradient(
-    circle at 89.7% 89.7%,
-    #9990ff 0,
-    #4361ed 50%,
-    #0039c8 100%
-  );
+
+  margin-bottom: 1rem;
+  background-image: radial-gradient(var(--cardcolor));
   & > h6 {
     font-weight: bolder;
     font-size: 26px;
@@ -17,9 +14,21 @@
     font-weight: bolder;
     align-self: center;
   }
-  & > dl {
+  &_table {
+    margin: 15px 15px 15px 15px;
+    color: whitesmoke;
     display: flex;
     justify-content: space-between;
+  }
+
+  & > dl {
+    margin: 15px 15px 15px 15px;
+    display: flex;
+    justify-content: space-between;
+    & > dt {
+      display: flex;
+      flex-direction: column;
+    }
     & > :is(dd, dt) {
       color: whitesmoke;
       font-size: 20px;
