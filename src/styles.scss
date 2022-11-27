@@ -1,10 +1,66 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
   --primarycolor: #4462ed;
+  --secundcolor: #275cfc5b;
+  --cardcolor: #003cffa8;
+  --buttonHoverColor: #4463edb5;
+  --formFont-color: ;
 }
 html,
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin: 0 auto;
   background-color: hsl(0deg 0% 100%);
+}
+
+//*Form global Struct/
+.formEstruc {
+  @extend %orentencionForm;
+  .form {
+    @extend %orentencionForm;
+    flex-direction: column;
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--formFont-color);
+
+    & > label {
+      margin-top: 15px;
+    }
+    & > input {
+      width: 300px;
+      height: 42px;
+      font-size: 18px;
+      border-radius: 15px;
+      border-color: hsl(342deg 67% 33%);
+    }
+    & > button {
+      margin-top: 15px;
+      height: 47px;
+      width: 150px;
+      border-radius: 15px;
+      background-color: var(--primarycolor);
+      &:hover {
+        background-color: var(--buttonHoverColor);
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+%orentencionForm {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./assets/font-app.png);
+  background-color: #cccccc;
+  background-repeat: no-repeat, repeat;
+  background-size: cover;
+}
+
+//*Container*/
+.container {
+  padding: auto;
+  margin: 1rem;
 }

@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AllGamesComponent } from './pages/all-games/all-games.component';
 import { HomeComponent } from './home.component';
+import { SelectionsComponent } from './pages/selections/selections.component';
+import { GrupsComponent } from './pages/grups/grups.component';
 
 const routes: Routes = [
   {
@@ -14,8 +16,12 @@ const routes: Routes = [
         component: AllGamesComponent,
       },
       {
-        path: 'grou',
-        component: AllGamesComponent,
+        path: 'countries',
+        component: SelectionsComponent,
+      },
+      {
+        path: 'groups',
+        component: GrupsComponent,
       },
 
       {

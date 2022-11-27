@@ -4,12 +4,15 @@
   flex-direction: column;
   border-radius: solid;
   padding: 1rem;
+  text-align: left;
+
   background-image: radial-gradient(
     circle at 89.7% 89.7%,
     #9990ff 0,
     #4361ed 50%,
     #0039c8 100%
   );
+
   & > h6 {
     font-weight: bolder;
     font-size: 26px;
@@ -17,9 +20,18 @@
     font-weight: bolder;
     align-self: center;
   }
+
+  &_figure {
+    align-self: center;
+    width: 100%;
+    height: 200px;
+    background-color: red;
+  }
   & > dl {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    padding: 0px 15px 0px 15px;
     & > :is(dd, dt) {
       color: whitesmoke;
       font-size: 20px;

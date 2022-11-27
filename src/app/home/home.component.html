@@ -1,2 +1,16 @@
-<p>home works!</p>
-<router-outlet></router-outlet>
+<nav class="home_nav">
+
+    <a routerLink="countries">Countries</a>
+    <a routerLink="allGames">Matches</a>
+    <a routerLink="groups">Groups</a>
+    <a><img src="../assets/auth.png" width="50px"></a>
+
+</nav>
+<section class="container">
+    <article class="home">
+        <main class="home_main">
+            <router-outlet></router-outlet>
+        </main>
+        <footer class="home_footer"></footer>
+    </article>
+</section>

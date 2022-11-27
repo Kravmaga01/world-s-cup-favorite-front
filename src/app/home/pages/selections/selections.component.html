@@ -1,0 +1,18 @@
+<H2>Selecciones</H2>
+<article class="card  container " *ngFor="let coutry of countries$ |async">
+    <h6>{{coutry.name}}</h6>
+    <figure class="card_figure">
+        <img src="{{coutry.flag}}" loading="lazy" width="100%" height="100%">
+    </figure>
+    <br>
+    <dl>
+
+        <dt>Games played </dt>
+        <dd>{{coutry.gamesPlayed}}</dd>
+        <dt>Games won </dt>
+        <dd>{{coutry.gamesWon}}</dd>
+        <dt>Lost Matches </dt>
+        <dd>{{coutry.lostMatches}}</dd>
+    </dl>
+
+</article>
