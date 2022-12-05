@@ -7,7 +7,7 @@
 
 </nav>
 <section [style.display]="displayNow" class="form-popup ">
-    <article class="profile-card container">
+    <article *ngIf="flidFront" class="profile-card ">
         <h2>Profile</h2>
         <img src="../assets/auth.png" width="150px" height="150px">
         <hr>
@@ -26,7 +26,29 @@
             <dd>Kravmaga@Email</dd>
         </dl>
         <hr>
-        <button>Changue Profile</button>
+        <button (click)="flidCard()">Changue Profile</button>
+    </article>
+
+    <article *ngIf="flidBack" class="profile-card  ">
+        <h2>Modificar Profile</h2>
+        <img src="../assets/auth.png" width="150px" height="150px">
+        <hr>
+        <dl>
+            <td>User Name</td>
+            <dd>Kravmaga</dd>
+        </dl>
+        <hr>
+        <dl>
+            <td>User Country</td>
+            <dd>KravmagCountry</dd>
+        </dl>
+        <hr>
+        <dl>
+            <td>User Email</td>
+            <dd>Kravmaga@Email</dd>
+        </dl>
+        <hr>
+        <button (click)="flidCard()">Changue Profile</button>
     </article>
 </section>
 <section class="container">

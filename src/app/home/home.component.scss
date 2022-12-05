@@ -35,13 +35,12 @@
   border-radius: 5%;
   z-index: 2;
   border: 3px solid #f1f1f1;
-  box-shadow: inset 1em 1em var(--secundcolor);
+  box-shadow: inset 1em 1px var(--secundcolor);
   background: var(--primarycolor);
 }
 
 .profile-card {
   width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;

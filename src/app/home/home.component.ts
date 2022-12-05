@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   displayNow: string = 'none';
+  flidFront: boolean = true;
+  flidBack: boolean = false;
+
   constructor() {}
 
   ngOnInit(): void {}
@@ -16,6 +19,17 @@ export class HomeComponent implements OnInit {
       this.displayNow = 'block';
     } else {
       this.displayNow = 'none';
+    }
+  }
+
+  flidCard() {
+    console.log('true');
+    if (this.flidFront) {
+      this.flidBack = true;
+      this.flidFront = false;
+    } else {
+      this.flidBack = false;
+      this.flidFront = true;
     }
   }
 }
