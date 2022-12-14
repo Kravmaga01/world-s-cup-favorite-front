@@ -1,7 +1,7 @@
 <H2>Matches</H2>
-<article class="card" *ngFor="let coutry of countries$ |async">
+<article class="card" *ngFor="let group of countries$ |async">
 
-    <h6>Grupo A</h6>
+    <h6>{{group.name}}</h6>
     <table class="card_table">
         <th>Equipos</th>
         <th> PG </th>
@@ -10,13 +10,14 @@
         <th> L </th>
         <th>Pts </th>
     </table>
-    <dl *ngFor="let country of countries$ | async">
-        <dt> <img src="{{coutry.flag}}" loading="lazy" width="24px" height="17px">{{coutry.name | uppercase}} </dt>
-        <dd> {{coutry.gamesPlayed}}</dd>
-        <dd> {{coutry.gamesWon}}</dd>
-        <dd> {{coutry.favoritePoint}}</dd>
-        <dd> {{coutry.lostMatches}}</dd>
-        <dd> {{coutry.favoritePoint}}</dd>
+    <dl *ngFor="let footballTeams of group.teams">
+        <dt> <img src="{{footballTeams.flag}}" loading="lazy" width="24px" height="17px">{{footballTeams.name |
+            uppercase}} </dt>
+        <dd> {{footballTeams.gamesPlayed}}</dd>
+        <dd> {{footballTeams.gamesWon}}</dd>
+        <dd> {{footballTeams.favoritePoint}}</dd>
+        <dd> {{footballTeams.lostMatches}}</dd>
+        <dd> {{footballTeams.favoritePoint}}</dd>
     </dl>
 
 

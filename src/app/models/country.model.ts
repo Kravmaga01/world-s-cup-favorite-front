@@ -1,4 +1,4 @@
-export interface CountryModel {
+export interface FootBallTeamModel {
   name: string;
   flag: string;
   favoritePoint: number;

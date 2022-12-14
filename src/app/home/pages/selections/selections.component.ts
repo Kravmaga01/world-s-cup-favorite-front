@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { CountryModel } from 'src/app/models/country.model';
-import { CuontriesService } from 'src/app/services/cuontries.service';
+import { FootBallTeamModel } from 'src/app/models/country.model';
+import { FootBallteamService } from 'src/app/services/football-team.service';
 
 @Component({
   selector: 'app-selections',
@@ -9,11 +9,11 @@ import { CuontriesService } from 'src/app/services/cuontries.service';
   styleUrls: ['./selections.component.scss'],
 })
 export class SelectionsComponent implements OnInit {
-  public countries$: Observable<CountryModel[]> | undefined;
-  constructor(private readonly cuontryService: CuontriesService) {}
+  public footballTeams$: Observable<FootBallTeamModel[]> | undefined;
+  constructor(private readonly cuontryService: FootBallteamService) {}
   ngOnInit(): void {
-    this.countries$ = this.cuontryService.getCoutries();
-    this.countries$.subscribe((countries) => {
+    this.footballTeams$ = this.cuontryService.getFootBallTeams();
+    this.footballTeams$.subscribe((countries) => {
       console.log({
         countries,
       });

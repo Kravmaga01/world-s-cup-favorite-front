@@ -9,6 +9,7 @@ export class HomeComponent implements OnInit {
   displayNow: string = 'none';
   flidFront: boolean = true;
   flidBack: boolean = false;
+  submbit: any;
 
   constructor() {}
 

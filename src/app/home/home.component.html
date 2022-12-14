@@ -29,27 +29,40 @@
         <button (click)="flidCard()">Changue Profile</button>
     </article>
 
-    <article *ngIf="flidBack" class="profile-card  ">
+    <form *ngIf="flidBack" class="profile-card form-changue-profile ">
         <h2>Modificar Profile</h2>
         <img src="../assets/auth.png" width="150px" height="150px">
         <hr>
         <dl>
-            <td>User Name</td>
-            <dd>Kravmaga</dd>
+            <label for="Name">
+                User Name
+            </label>
+            <input type="text" id="Name" name="Name">
         </dl>
         <hr>
         <dl>
-            <td>User Country</td>
-            <dd>KravmagCountry</dd>
+            <label for="Email">
+                User Email
+            </label>
+            <input type="email" id="Email" name="Email">
         </dl>
         <hr>
         <dl>
-            <td>User Email</td>
-            <dd>Kravmaga@Email</dd>
+            <label for="Password">
+                User Password
+            </label>
+            <input type="password" id="Password" name="Password">
+        </dl>
+        <dl>
+            <label for="Repit-password">
+                Repet Password
+            </label>
+            <input type="password" id="Repit-password" name="Repit-password">
         </dl>
         <hr>
-        <button (click)="flidCard()">Changue Profile</button>
-    </article>
+        <button (submit)="submbit">Confirm Changue</button>
+        <button (click)="flidCard()">Cancel Changue </button>
+    </form>
 </section>
 <section class="container">
     <article class="home">
